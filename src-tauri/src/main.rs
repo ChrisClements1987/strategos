@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    strategos_temp_lib::run()
+    strategos_lib::run()
 }
