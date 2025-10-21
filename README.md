@@ -27,18 +27,27 @@ To empower individual strategists, founders, and product managers with a private
 | **Database** | [SQLite](https://www.sqlite.org/) | Local, single-file relational database |
 | **Styling** | CSS/SCSS | Custom styling with modern CSS |
 
-## Features (v0.1)
+## Features (v0.1) ✅
 
+**Core Engine (E-1.1):**
 - ✅ Portfolio Management (CRUD)
-- ✅ Product Management (CRUD)
+- ✅ Product Management (CRUD with nested modules)
 - ✅ Feature Management (CRUD)
-- ✅ Licence Management (CRUD)
+- ✅ Licence Management (CRUD with feature bundling)
 - ✅ Client/Persona Management (CRUD)
 - ✅ Requirement Management (CRUD)
-- 🚧 Dynamic Phase (Roadmap) View
-- 🚧 Dynamic Product View
-- 🚧 Dynamic Licence View
-- 🚧 Dynamic Client View
+
+**Dynamic Views (E-2.1):**
+- ✅ Products view with portfolio filtering
+- ✅ Licences view with portfolio filtering
+- ✅ Clients view with portfolio filtering
+- ✅ Features view with portfolio + product filtering
+- ✅ Requirements view with portfolio + client filtering
+
+**Technical:**
+- ✅ 43 backend unit tests passing
+- ✅ SQLite database with full relational schema
+- ✅ Cross-platform builds (Windows/macOS/Linux)
 
 ## Getting Started
 
@@ -126,4 +135,4 @@ Built with ❤️ using [Tauri](https://tauri.app/), [Svelte](https://svelte.dev
 
 ---
 
-**Status:** 🚧 v0.1 in active development
+**Status:** ✅ v0.1 Complete - Ready for Release
