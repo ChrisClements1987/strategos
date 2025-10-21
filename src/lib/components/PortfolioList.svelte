@@ -4,7 +4,7 @@
   import type { Portfolio } from '$lib/types/portfolio';
   import PortfolioForm from './PortfolioForm.svelte';
 
-  let portfolios: Portfolio[] = [];
+  let portfolios: Portfolio[] = $state([]);
   let loading = $state(true);
   let error: string | null = $state(null);
   let showForm = $state(false);
