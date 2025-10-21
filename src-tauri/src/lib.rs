@@ -7,6 +7,10 @@ use commands::portfolio::{
     AppState, create_portfolio, get_portfolio, get_all_portfolios, 
     update_portfolio, delete_portfolio, get_db_path
 };
+use commands::feature::{
+    create_feature, get_feature, get_features_by_product,
+    update_feature, delete_feature
+};
 use db::init_db;
 use std::sync::Mutex;
 use tauri::Manager;
@@ -36,7 +40,12 @@ pub fn run() {
             get_portfolio,
             get_all_portfolios,
             update_portfolio,
-            delete_portfolio
+            delete_portfolio,
+            create_feature,
+            get_feature,
+            get_features_by_product,
+            update_feature,
+            delete_feature
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
