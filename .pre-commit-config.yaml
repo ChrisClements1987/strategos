@@ -1,0 +1,55 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+      - id: check-toml
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+
+  - repo: https://github.com/prettier/prettier
+    rev: v3.1.1
+    hooks:
+      - id: prettier
+        types_or: [javascript, typescript, svelte, css, scss, markdown]
+        additional_dependencies:
+          - prettier@3.1.1
+          - prettier-plugin-svelte@3.1.2
+
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.56.0
+    hooks:
+      - id: eslint
+        files: \.(js|ts|svelte)$
+        types: [file]
+        additional_dependencies:
+          - eslint@8.56.0
+          - eslint-plugin-svelte@2.35.1
+          - typescript@5.3.3
+
+  - repo: local
+    hooks:
+      - id: cargo-fmt
+        name: cargo fmt
+        entry: cargo fmt
+        language: system
+        types: [rust]
+        pass_filenames: false
+        args: [--manifest-path, src-tauri/Cargo.toml, --all, --]
+
+      - id: cargo-clippy
+        name: cargo clippy
+        entry: cargo clippy
+        language: system
+        types: [rust]
+        pass_filenames: false
+        args:
+          - --manifest-path
+          - src-tauri/Cargo.toml
+          - --all-targets
+          - --all-features
+          - --
+          - -D
+          - warnings

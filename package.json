@@ -4,7 +4,7 @@
   "description": "A fast, local-first portfolio management tool for power users.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChrisClements1987/Strategos.git"
+    "url": "https://github.com/ChrisClements1987/strategos.git"
   },
   "type": "module",
   "scripts": {
@@ -24,10 +24,14 @@
     "@sveltejs/adapter-static": "^3.0.6",
     "@sveltejs/kit": "^2.9.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "@tauri-apps/cli": "^2",
+    "eslint": "^9.38.0",
+    "eslint-plugin-svelte": "^3.12.5",
+    "prettier": "^3.6.2",
+    "prettier-plugin-svelte": "^3.4.0",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "typescript": "~5.6.2",
-    "vite": "^6.0.3",
-    "@tauri-apps/cli": "^2"
+    "vite": "^6.0.3"
   }
 }
