@@ -11,6 +11,23 @@ use commands::product::{
     create_product, get_product, get_products_by_portfolio,
     get_product_modules, update_product, delete_product
 };
+use commands::feature::{
+    create_feature, get_feature, get_features_by_product,
+    update_feature, delete_feature
+};
+use commands::licence::{
+    create_licence, get_licence, get_licences_by_portfolio,
+    add_feature_to_licence, remove_feature_from_licence,
+    get_licence_features, update_licence, delete_licence
+};
+use commands::client::{
+    create_client, get_client, get_clients_by_portfolio,
+    update_client, delete_client
+};
+use commands::requirement::{
+    create_requirement, get_requirement, get_requirements_by_client,
+    update_requirement, delete_requirement
+};
 use db::init_db;
 use std::sync::Mutex;
 use tauri::Manager;
@@ -46,7 +63,30 @@ pub fn run() {
             get_products_by_portfolio,
             get_product_modules,
             update_product,
-            delete_product
+            delete_product,
+            create_feature,
+            get_feature,
+            get_features_by_product,
+            update_feature,
+            delete_feature,
+            create_licence,
+            get_licence,
+            get_licences_by_portfolio,
+            add_feature_to_licence,
+            remove_feature_from_licence,
+            get_licence_features,
+            update_licence,
+            delete_licence,
+            create_client,
+            get_client,
+            get_clients_by_portfolio,
+            update_client,
+            delete_client,
+            create_requirement,
+            get_requirement,
+            get_requirements_by_client,
+            update_requirement,
+            delete_requirement
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

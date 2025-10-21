@@ -60,7 +60,7 @@ mod tests {
     #[test]
     fn test_product_new() {
         let product = Product::new(1, "Test Product".to_string(), Some("Description".to_string()), None);
-        
+
         assert_eq!(product.portfolio_id, 1);
         assert_eq!(product.name, "Test Product");
         assert_eq!(product.description, Some("Description".to_string()));
@@ -72,7 +72,7 @@ mod tests {
     #[test]
     fn test_product_new_module() {
         let product = Product::new_module(1, 5, "Test Module".to_string(), None);
-        
+
         assert_eq!(product.portfolio_id, 1);
         assert_eq!(product.parent_product_id, Some(5));
         assert_eq!(product.name, "Test Module");
